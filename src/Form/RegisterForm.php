@@ -12,14 +12,37 @@
 				;
 		}
 
+		public function isAlphaNumericUnderbar($str){
+			return preg_match( '/^[_A-Za-z0-9]*$/', $str ) == 1;
+		}
+
 		protected function _buildValidator(Validator $validator){
-			return $validator->lengthBetween( 'username', [ 4, 16 ] )
+			return $validator->notEmpty('username','ユーザ名が空白です。')
+							 ->notEmpty('password','パスワードが空白です。')
+							 ->add( 'username',  
+									[
+										'length'=> [
+											'rule' => [ 'lengthBetween', 4, 16 ],
+											'message' => 'ユーザ名は4文字から16文字の間です。'
+										]
+									] )
+							 ->add( 'password', 
+									[
+										'length' => [
+											 'rule' => [ 'minLength', 8 ], 
+											 'message' => 'パスワードは8文字以上です。'
+										]
+									] )
 							 ->add( 'username', 'custom',
 							 		[
-							 			'rule' => function($value,$context){
-							 				return preg_match( '/^[_A-Za-z0-9]*$/', $value ) == 1;
-							 			},
-							 			'message' => 'ユーザー名に使用できるのは半角英数字と_（アンダーバー）だけです'
+							 			'rule' => [ $this, 'isAlphaNumericUnderbar' ],
+							 			'message' => 'ユーザ名に使用できるのは半角英数字と_（アンダーバー）だけです'
+							 		]
+							 	)
+							 ->add( 'password', 'custom',
+							 		[
+							 			'rule' => [ $this, 'isAlphaNumericUnderbar' ],
+							 			'message' => 'パスワードに使用できるのは半角英数字と_（アンダーバー）だけです'
 							 		]
 							 	)
 				;

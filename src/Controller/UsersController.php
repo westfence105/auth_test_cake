@@ -16,12 +16,31 @@
 		}
 
 		public function register(){
-			$form = new RegisterForm();
 			if($this->request->is('post')){
-				if( $form->execute($this->request->data) ){
-					$this->Flash->success('Success');
+				$data = $this->request->data();
+				$form = new RegisterForm();
+				if( $form->execute( $data ) ){
+					$user = $this->Users->newEntity( $data );
+	
+					if( $user->errors() ){
+						$this->Flash->error('データの検証過程でエラーが発生しました。');
+					}
+					else if( $this->Users->save($user) ){
+						$this->Flash->success( '登録完了' );
+					}
+					else{
+						$this->Flash->error('データベースへの登録に失敗しました。');
+					}
+
+					$errors = $user->errors();
+					foreach ($errors as $key => $value) {
+						foreach ( $value as $cond => $error) {
+							$this->Flash->error($error);
+						}
+					}
 				}
-				else{
+				else {
+					$this->Flash->error('フォームの入力内容にエラーがあります。');
 					$errors = $form->errors();
 					foreach ($errors as $key => $value) {
 						foreach ( $value as $cond => $error) {
