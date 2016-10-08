@@ -1,0 +1,85 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-10-08 12:09+0900\n"
+"PO-Revision-Date: 2016-10-08 12:09+0900\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: westfence105 <westfence105@yahoo.co.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+
+#: Controller/UsersController.php:26
+msgid "Error while validating data."
+msgstr "データの検証過程でエラーが発生しました。"
+
+#: Controller/UsersController.php:32
+msgid "Failed to add to database."
+msgstr "データベースへの登録に失敗しました。"
+
+#: Controller/UsersController.php:43
+msgid "Form data has invalid content."
+msgstr "フォームの入力内容にエラーがあります。"
+
+#: Controller/UsersController.php:29
+msgctxt "registration completed"
+msgid "Success"
+msgstr "登録完了"
+
+#: Form/RegisterForm.php:20
+msgid "Username is empty."
+msgstr "ユーザー名が入力されていません。"
+
+#: Form/RegisterForm.php:21
+msgid "Password is empty."
+msgstr "パスワードが入力されていません。"
+
+#: Form/RegisterForm.php:26
+msgid "Username have to be between 4 and 16 characters."
+msgstr "ユーザー名は4文字から16文字の間です。"
+
+#: Form/RegisterForm.php:33
+msgid "Password have to be over 8 characters."
+msgstr "パスワードは8文字以上です。"
+
+#: Form/RegisterForm.php:39
+msgid "Username can only contain letters, numbers or underscore(_)."
+msgstr "ユーザー名に使用できるのは半角英数字とアンダースコア(_)のみです。"
+
+#: Form/RegisterForm.php:45
+msgid "Password can only contain letters, numbers or underscore(_)."
+msgstr "パスワードに使用できるのは半角英数字とアンダースコア(_)のみです。"
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr "エラー"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "戻る"
+
+#: Template/Users/register.ctp:4
+msgid "Username"
+msgstr "ユーザー名"
+
+#: Template/Users/register.ctp:5
+msgid "Password"
+msgstr "パスワード"
+
+#: Template/Users/register.ctp:1
+msgctxt "title of register page"
+msgid "Register"
+msgstr "登録"
+
+#: Template/Users/register.ctp:7
+msgctxt "submit register form"
+msgid "Register"
+msgstr "登録"

@@ -1,0 +1,83 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-10-08 02:43+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/UsersController.php:26
+msgid "Error while validating data."
+msgstr ""
+
+#: Controller/UsersController.php:32
+msgid "Failed to add to database."
+msgstr ""
+
+#: Controller/UsersController.php:43
+msgid "Form data has invalid content."
+msgstr ""
+
+#: Controller/UsersController.php:29
+msgctxt "registration completed"
+msgid "Success"
+msgstr ""
+
+#: Form/RegisterForm.php:20
+msgid "Username is empty."
+msgstr ""
+
+#: Form/RegisterForm.php:21
+msgid "Password is empty."
+msgstr ""
+
+#: Form/RegisterForm.php:26
+msgid "Username have to be between 4 and 16 characters."
+msgstr ""
+
+#: Form/RegisterForm.php:33
+msgid "Password have to be over 8 characters."
+msgstr ""
+
+#: Form/RegisterForm.php:39
+msgid "Username can only contain letters, numbers or underscore(_)."
+msgstr ""
+
+#: Form/RegisterForm.php:45
+msgid "Password can only contain letters, numbers or underscore(_)."
+msgstr ""
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/Users/register.ctp:4
+msgid "Username"
+msgstr ""
+
+#: Template/Users/register.ctp:5
+msgid "Password"
+msgstr ""
+
+#: Template/Users/register.ctp:1
+msgctxt "title of register page"
+msgid "Register"
+msgstr ""
+
+#: Template/Users/register.ctp:7
+msgctxt "submit register form"
+msgid "Register"
+msgstr ""
+

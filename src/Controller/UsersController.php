@@ -23,13 +23,13 @@
 					$user = $this->Users->newEntity( $data );
 	
 					if( $user->errors() ){
-						$this->Flash->error('データの検証過程でエラーが発生しました。');
+						$this->Flash->error( __('Error while validating data.') );
 					}
 					else if( $this->Users->save($user) ){
-						$this->Flash->success( '登録完了' );
+						$this->Flash->success( __x('registration completed','Success') );
 					}
 					else{
-						$this->Flash->error('データベースへの登録に失敗しました。');
+						$this->Flash->error( __('Failed to add to database.') );
 					}
 
 					$errors = $user->errors();
@@ -40,7 +40,7 @@
 					}
 				}
 				else {
-					$this->Flash->error('フォームの入力内容にエラーがあります。');
+					$this->Flash->error( __('Form data has invalid content.') );
 					$errors = $form->errors();
 					foreach ($errors as $key => $value) {
 						foreach ( $value as $cond => $error) {

@@ -17,32 +17,32 @@
 		}
 
 		protected function _buildValidator(Validator $validator){
-			return $validator->notEmpty('username','ユーザ名が空白です。')
-							 ->notEmpty('password','パスワードが空白です。')
+			return $validator->notEmpty('username',__('Username is empty.') )
+							 ->notEmpty('password',__('Password is empty.') )
 							 ->add( 'username',  
 									[
 										'length'=> [
 											'rule' => [ 'lengthBetween', 4, 16 ],
-											'message' => 'ユーザ名は4文字から16文字の間です。'
+											'message' => __('Username have to be between 4 and 16 characters.')
 										]
 									] )
 							 ->add( 'password', 
 									[
 										'length' => [
 											 'rule' => [ 'minLength', 8 ], 
-											 'message' => 'パスワードは8文字以上です。'
+											 'message' => __('Password have to be over 8 characters.')
 										]
 									] )
 							 ->add( 'username', 'custom',
 							 		[
 							 			'rule' => [ $this, 'isAlphaNumericUnderbar' ],
-							 			'message' => 'ユーザ名に使用できるのは半角英数字と_（アンダーバー）だけです'
+							 			'message' => __('Username can only contain letters, numbers or underscore(_).')
 							 		]
 							 	)
 							 ->add( 'password', 'custom',
 							 		[
 							 			'rule' => [ $this, 'isAlphaNumericUnderbar' ],
-							 			'message' => 'パスワードに使用できるのは半角英数字と_（アンダーバー）だけです'
+							 			'message' => __('Password can only contain letters, numbers or underscore(_).')
 							 		]
 							 	)
 				;
