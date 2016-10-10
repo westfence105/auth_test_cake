@@ -1,5 +1,5 @@
-CREATE OR REPLACE TABLE users
+CREATE TABLE IF NOT EXISTS users
 	(
 		username varchar(16) PRIMARY KEY NOT NULL,
-		password_hash varchar(255) default ''
+		password varchar(255)
 	);
