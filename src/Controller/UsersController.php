@@ -9,14 +9,32 @@
 		public function initialize(){
 			parent::initialize();
 			$this->loadComponent('Csrf');
+			$this->loadComponent('Auth', 
+				[ 'authenticate' => 'Form' , 
+				  'loginRedirect' => [ 'controller' => 'Users', 'action' => 'index' ]
+				]);
+			$this->Auth->allow('register');
+		}
+
+		public function index(){
+
 		}
 
 		public function login(){
-			
+			if( $this->request->is('post') ){
+				$user = $this->Auth->Identify();
+				if( $user ){
+					$this->Auth->setUser($user);
+					$this->redirect($this->Auth->redirectUrl());
+				}
+				else {
+					$this->Flash->error(__('Username or password is incorrect.'));
+				}
+			}
 		}
 
 		public function register(){
-			if($this->request->is('post')){
+			if ($this->request->is('post') ){
 				$user = $this->Users->newEntity( $this->request->data() );
 	
 				if( $user->errors() ){
@@ -31,7 +49,6 @@
 
 				$this->set('errors',$user->errors());
 			}
-			$this->render();
 		}
 	}
 ?>

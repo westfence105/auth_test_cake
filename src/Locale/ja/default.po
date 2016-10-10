@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-10 11:15+0900\n"
-"PO-Revision-Date: 2016-10-10 11:16+0900\n"
+"POT-Creation-Date: 2016-10-10 12:27+0900\n"
+"PO-Revision-Date: 2016-10-10 12:28+0900\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: westfence105 <westfence105@yahoo.co.jp>\n"
 "Language: ja\n"
@@ -17,15 +17,19 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
 
-#: Controller/UsersController.php:23
+#: Controller/UsersController.php:28
+msgid "Username or password is incorrect."
+msgstr "ユーザー名、またはパスワードが間違っています。"
+
+#: Controller/UsersController.php:38
 msgid "Form data has invalid content."
 msgstr "フォームの入力内容にエラーがあります。"
 
-#: Controller/UsersController.php:29
+#: Controller/UsersController.php:44
 msgid "Failed to add to database."
 msgstr "データベースへの登録に失敗しました。"
 
-#: Controller/UsersController.php:26
+#: Controller/UsersController.php:41
 msgctxt "registration completed"
 msgid "Success"
 msgstr "登録完了"
@@ -66,20 +70,30 @@ msgstr "エラー"
 msgid "Back"
 msgstr "戻る"
 
-#: Template/Users/register.ctp:4
+#: Template/Users/login.ctp:5 Template/Users/register.ctp:5
 msgid "Username"
 msgstr "ユーザー名"
 
-#: Template/Users/register.ctp:5
+#: Template/Users/login.ctp:6 Template/Users/register.ctp:12
 msgid "Password"
 msgstr "パスワード"
+
+#: Template/Users/login.ctp:1
+msgctxt "title of login page"
+msgid "Login"
+msgstr "ログイン"
+
+#: Template/Users/login.ctp:8
+msgctxt "submit login form"
+msgid "Login"
+msgstr "ログイン"
 
 #: Template/Users/register.ctp:1
 msgctxt "title of register page"
 msgid "Register"
 msgstr "登録"
 
-#: Template/Users/register.ctp:7
+#: Template/Users/register.ctp:19
 msgctxt "submit register form"
 msgid "Register"
 msgstr "登録"

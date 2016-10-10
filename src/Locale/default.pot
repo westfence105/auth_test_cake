@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-10 02:14+0000\n"
+"POT-Creation-Date: 2016-10-10 03:27+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,15 +14,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/UsersController.php:23
+#: Controller/UsersController.php:28
+msgid "Username or password is incorrect."
+msgstr ""
+
+#: Controller/UsersController.php:38
 msgid "Form data has invalid content."
 msgstr ""
 
-#: Controller/UsersController.php:29
+#: Controller/UsersController.php:44
 msgid "Failed to add to database."
 msgstr ""
 
-#: Controller/UsersController.php:26
+#: Controller/UsersController.php:41
 msgctxt "registration completed"
 msgid "Success"
 msgstr ""
@@ -63,12 +67,24 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: Template/Users/register.ctp:4
+#: Template/Users/login.ctp:5
+#: Template/Users/register.ctp:5
 msgid "Username"
 msgstr ""
 
-#: Template/Users/register.ctp:5
+#: Template/Users/login.ctp:6
+#: Template/Users/register.ctp:12
 msgid "Password"
+msgstr ""
+
+#: Template/Users/login.ctp:1
+msgctxt "title of login page"
+msgid "Login"
+msgstr ""
+
+#: Template/Users/login.ctp:8
+msgctxt "submit login form"
+msgid "Login"
 msgstr ""
 
 #: Template/Users/register.ctp:1
@@ -76,7 +92,7 @@ msgctxt "title of register page"
 msgid "Register"
 msgstr ""
 
-#: Template/Users/register.ctp:7
+#: Template/Users/register.ctp:19
 msgctxt "submit register form"
 msgid "Register"
 msgstr ""
