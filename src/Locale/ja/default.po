@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-08 12:09+0900\n"
-"PO-Revision-Date: 2016-10-08 12:09+0900\n"
+"POT-Creation-Date: 2016-10-10 10:37+0900\n"
+"PO-Revision-Date: 2016-10-10 10:37+0900\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: westfence105 <westfence105@yahoo.co.jp>\n"
 "Language: ja\n"
@@ -17,44 +17,40 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
 
-#: Controller/UsersController.php:26
-msgid "Error while validating data."
-msgstr "データの検証過程でエラーが発生しました。"
-
-#: Controller/UsersController.php:32
-msgid "Failed to add to database."
-msgstr "データベースへの登録に失敗しました。"
-
-#: Controller/UsersController.php:43
+#: Controller/UsersController.php:23
 msgid "Form data has invalid content."
 msgstr "フォームの入力内容にエラーがあります。"
 
 #: Controller/UsersController.php:29
+msgid "Failed to add to database."
+msgstr "データベースへの登録に失敗しました。"
+
+#: Controller/UsersController.php:26
 msgctxt "registration completed"
 msgid "Success"
 msgstr "登録完了"
 
-#: Form/RegisterForm.php:20
+#: Form/RegisterForm.php:20 Model/Table/UsersTable.php:51
 msgid "Username is empty."
 msgstr "ユーザー名が入力されていません。"
 
-#: Form/RegisterForm.php:21
+#: Form/RegisterForm.php:21 Model/Table/UsersTable.php:52
 msgid "Password is empty."
 msgstr "パスワードが入力されていません。"
 
-#: Form/RegisterForm.php:26
+#: Form/RegisterForm.php:26 Model/Table/UsersTable.php:57
 msgid "Username have to be between 4 and 16 characters."
 msgstr "ユーザー名は4文字から16文字の間です。"
 
-#: Form/RegisterForm.php:33
+#: Form/RegisterForm.php:33 Model/Table/UsersTable.php:64
 msgid "Password have to be over 8 characters."
 msgstr "パスワードは8文字以上です。"
 
-#: Form/RegisterForm.php:39
+#: Form/RegisterForm.php:39 Model/Table/UsersTable.php:70
 msgid "Username can only contain letters, numbers or underscore(_)."
 msgstr "ユーザー名に使用できるのは半角英数字とアンダースコア(_)のみです。"
 
-#: Form/RegisterForm.php:45
+#: Form/RegisterForm.php:45 Model/Table/UsersTable.php:76
 msgid "Password can only contain letters, numbers or underscore(_)."
 msgstr "パスワードに使用できるのは半角英数字とアンダースコア(_)のみです。"
 
@@ -83,3 +79,6 @@ msgstr "登録"
 msgctxt "submit register form"
 msgid "Register"
 msgstr "登録"
+
+#~ msgid "Error while validating data."
+#~ msgstr "データの検証過程でエラーが発生しました。"

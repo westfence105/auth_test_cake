@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-08 02:43+0000\n"
+"POT-Creation-Date: 2016-10-10 01:36+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,44 +14,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/UsersController.php:26
-msgid "Error while validating data."
-msgstr ""
-
-#: Controller/UsersController.php:32
-msgid "Failed to add to database."
-msgstr ""
-
-#: Controller/UsersController.php:43
+#: Controller/UsersController.php:23
 msgid "Form data has invalid content."
 msgstr ""
 
 #: Controller/UsersController.php:29
+msgid "Failed to add to database."
+msgstr ""
+
+#: Controller/UsersController.php:26
 msgctxt "registration completed"
 msgid "Success"
 msgstr ""
 
 #: Form/RegisterForm.php:20
+#: Model/Table/UsersTable.php:51
 msgid "Username is empty."
 msgstr ""
 
 #: Form/RegisterForm.php:21
+#: Model/Table/UsersTable.php:52
 msgid "Password is empty."
 msgstr ""
 
 #: Form/RegisterForm.php:26
+#: Model/Table/UsersTable.php:57
 msgid "Username have to be between 4 and 16 characters."
 msgstr ""
 
 #: Form/RegisterForm.php:33
+#: Model/Table/UsersTable.php:64
 msgid "Password have to be over 8 characters."
 msgstr ""
 
 #: Form/RegisterForm.php:39
+#: Model/Table/UsersTable.php:70
 msgid "Username can only contain letters, numbers or underscore(_)."
 msgstr ""
 
 #: Form/RegisterForm.php:45
+#: Model/Table/UsersTable.php:76
 msgid "Password can only contain letters, numbers or underscore(_)."
 msgstr ""
 

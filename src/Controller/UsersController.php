@@ -17,35 +17,22 @@
 
 		public function register(){
 			if($this->request->is('post')){
-				$data = $this->request->data();
-				$form = new RegisterForm();
-				if( $form->execute( $data ) ){
-					$user = $this->Users->newEntity( $data );
+				$user = $this->Users->newEntity( $this->request->data() );
 	
-					if( $user->errors() ){
-						$this->Flash->error( __('Error while validating data.') );
-					}
-					else if( $this->Users->save($user) ){
-						$this->Flash->success( __x('registration completed','Success') );
-					}
-					else{
-						$this->Flash->error( __('Failed to add to database.') );
-					}
-
-					$errors = $user->errors();
-					foreach ($errors as $key => $value) {
-						foreach ( $value as $cond => $error) {
-							$this->Flash->error($error);
-						}
-					}
-				}
-				else {
+				if( $user->errors() ){
 					$this->Flash->error( __('Form data has invalid content.') );
-					$errors = $form->errors();
-					foreach ($errors as $key => $value) {
-						foreach ( $value as $cond => $error) {
-							$this->Flash->error($error);
-						}
+				}
+				else if( $this->Users->save($user) ){
+					$this->Flash->success( __x('registration completed','Success') );
+				}
+				else{
+					$this->Flash->error( __('Failed to add to database.') );
+				}
+
+				$errors = $user->errors();
+				foreach ($errors as $key => $value) {
+					foreach ( $value as $cond => $error) {
+						$this->Flash->error($error);
 					}
 				}
 			}
