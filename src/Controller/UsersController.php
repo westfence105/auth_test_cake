@@ -30,7 +30,6 @@
 				}
 
 				$this->set('errors',$user->errors());
-				$this->Flash->error(json_encode($this->viewVars));
 			}
 			$this->render();
 		}
