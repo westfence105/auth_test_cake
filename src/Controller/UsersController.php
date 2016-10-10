@@ -29,13 +29,10 @@
 					$this->Flash->error( __('Failed to add to database.') );
 				}
 
-				$errors = $user->errors();
-				foreach ($errors as $key => $value) {
-					foreach ( $value as $cond => $error) {
-						$this->Flash->error($error);
-					}
-				}
+				$this->set('errors',$user->errors());
+				$this->Flash->error(json_encode($this->viewVars));
 			}
+			$this->render();
 		}
 	}
 ?>

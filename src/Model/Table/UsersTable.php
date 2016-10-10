@@ -50,6 +50,14 @@ class UsersTable extends Table
     {
         $validator->notEmpty('username',__('Username is empty.') )
                   ->notEmpty('password',__('Password is empty.') )
+                  ->add( 'username', 
+                         [ 
+                            'unique' => [ 
+                                'rule' => 'validateUnique',
+                                'provider' => 'table',
+                                'message' => __('Username already exists.')
+                            ] 
+                         ] )
                   ->add( 'username',  
                          [
                              'length'=> [
